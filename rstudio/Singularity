@@ -31,6 +31,7 @@ FROM: r-base:3.5.1
   export RSTUDIO_VERSION=1.1.456
   apt-get update
   apt-get install -y \
+    wget \
     gdebi-core \
     libxslt1-dev \
     qt5-default \
