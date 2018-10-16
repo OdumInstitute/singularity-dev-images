@@ -3,7 +3,7 @@ FROM: r-base:3.5.1
 
 %help
   RStudio Desktop version 1.1.456
-  R version 3.5.1 (2018-07-02) -- "Feather Spray"
+  R version 3.5.1 (2018-10-16) -- "Feather Spray"
 
   Usage:
   $ singularity run rstudio.3.5.1.simg [args]
