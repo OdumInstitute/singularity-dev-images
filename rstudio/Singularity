@@ -2,7 +2,7 @@ Bootstrap: docker
 FROM: r-base:3.5.1
 
 %help
-  RStudio Desktop version 1.1.456
+  RStudio Desktop version 1.1.463
   R version 3.5.1 (2018-10-16) -- "Feather Spray"
 
   Usage:
