@@ -19,14 +19,14 @@ Include: yum
   Maintainer Michael J. Stealey
   Maintainer_Email stealey@renci.org
   Gephi_Version 0.9.2
-  Java_Version 1.8.0_171
+  Java_Version 1.8.0_181
 
 %environment
-  JAVA_VERSION=1.8.0_171
+  JAVA_VERSION=1.8.0_181
   GEPHI_VERSION=0.9.2
 
 %post
-  export JAVA_VERSION=1.8.0_171
+  export JAVA_VERSION=1.8.0_181
   export GEPHI_VERSION=0.9.2
   yum -y install \
     tar \
