@@ -12,15 +12,15 @@ Include: yum
 %labels
   Maintainer Michael J. Stealey
   Maintainer_Email stealey@renci.org
-  Anaconda_Version 5.1.0
-  Python_Version 3.6.4
+  Anaconda_Version 5.3.1
+  Python_Version 3.6.7
 
 %environment
-  export ANACONDA_VERSION=5.1.0
+  export ANACONDA_VERSION=5.3.1
   export PATH=/usr/local/anaconda/bin:$PATH
 
 %post
-  export ANACONDA_VERSION=5.1.0
+  export ANACONDA_VERSION=5.3.1
 
   yum -y install \
     bzip2 ca-certificates \
