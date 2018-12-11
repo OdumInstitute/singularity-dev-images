@@ -7,9 +7,9 @@ FROM: r-base:3.5.1
 
   Usage:
   $ singularity run rstudio.3.5.1.simg [args]
+  $ singularity run --app rstudio rstudio.3.5.1.simg
   $ singularity run --app R rstudio.3.5.1.simg [args]
   $ singularity run --app Rscript rstudio.3.5.1.simg [args]
-  $ singularity run --app rstudio rstudio.3.5.1.simg
 
 %setup
 
