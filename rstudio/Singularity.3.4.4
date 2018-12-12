@@ -2,14 +2,14 @@ Bootstrap: docker
 FROM: r-base:3.4.4
 
 %help
-  RStudio Desktop version 1.1.442
   R version 3.4.4 (2018-03-15) -- "Someone to Lean On"
+  RStudio Desktop version 1.1.442
 
   Usage:
-  $ singularity run rstudio.3.4.4.simg [args]
-  $ singularity run --app R rstudio.3.4.4.simg [args]
-  $ singularity run --app Rscript rstudio.3.4.4.simg [args]
-  $ singularity run --app rstudio rstudio.3.4.4.simg
+  $ singularity run --app R rstudio rstudio-rstudio-3.4.4.simg [args]
+  $ singularity run --app Rscript rstudio rstudio-rstudio-3.4.4.simg [args]
+  $ singularity run --app rstudio rstudio rstudio-rstudio-3.4.4.simg
+  $ singularity run rstudio rstudio-rstudio-3.4.4.simg [args]
 
 %setup
 
