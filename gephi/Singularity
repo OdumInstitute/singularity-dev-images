@@ -19,14 +19,14 @@ Include: yum
   Maintainer Michael J. Stealey
   Maintainer_Email stealey@renci.org
   Gephi_Version 0.9.2
-  Java_Version 1.8.0_181
+  Java_Version 1.8.0
 
 %environment
-  JAVA_VERSION=1.8.0_181
+  JAVA_VERSION=1.8.0
   GEPHI_VERSION=0.9.2
 
 %post
-  export JAVA_VERSION=1.8.0_181
+  export JAVA_VERSION=1.8.0
   export GEPHI_VERSION=0.9.2
   yum -y install \
     tar \
@@ -41,9 +41,10 @@ Include: yum
   curl -LOH 'Cookie: oraclelicense=accept-securebackup-cookie' "${RPM_URL}"
   yum -y localinstall jdk-*.rpm
   rm -f jdk-*.rpm
-  export JAVA_HOME=/usr/java/jdk${JAVA_VERSION}-amd64
-  export JRE_HOME=/usr/java/jdk${JAVA_VERSION}-amd64/jre/bin
-  export PATH=/usr/java/jdk${JAVA_VERSION}-amd64/bin:$PATH
+  JAVA_DIR='/usr/java/'$(ls /usr/java/ | grep jdk)
+  export JAVA_HOME=${JAVA_DIR}
+  export JRE_HOME=${JAVA_DIR}/jre/bin
+  export PATH=${JAVA_DIR}/bin:$PATH
 
   # install gephi
   cd /usr/local
@@ -56,9 +57,9 @@ Include: yum
   # create init.sh
   cat > /usr/local/init.sh <<EOF
 #!/usr/bin/env bash
-export JAVA_HOME=/usr/java/jdk${JAVA_VERSION}-amd64
-export JRE_HOME=/usr/java/jdk${JAVA_VERSION}-amd64/jre/bin
-export PATH=/usr/java/jdk${JAVA_VERSION}-amd64/bin:\$PATH
+export JAVA_HOME=${JAVA_DIR}
+export JRE_HOME=${JAVA_DIR}/jre/bin
+export PATH=${JAVA_DIR}/bin:$PATH
 export PATH=/usr/local/gephi-${GEPHI_VERSION}/bin:\$PATH
 EOF
   chmod a+x /usr/local/init.sh
