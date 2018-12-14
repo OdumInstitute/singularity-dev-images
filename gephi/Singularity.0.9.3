@@ -48,7 +48,7 @@ Include: yum
 
   # install gephi
   cd /usr/local
-  curl -L https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi&v=0.9.3-SNAPSHOT&c=linux&p=tar.gz -o gephi-${GEPHI_VERSION}-linux.tar.gz
+  curl -L 'https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.gephi&a=gephi&v=0.9.3-SNAPSHOT&c=linux&p=tar.gz' -o gephi-${GEPHI_VERSION}-linux.tar.gz
   tar xzvf gephi-${GEPHI_VERSION}-linux.tar.gz
   rm -f gephi-${GEPHI_VERSION}-linux.tar.gz
   export PATH=/usr/local/gephi-${GEPHI_VERSION}/bin:$PATH
