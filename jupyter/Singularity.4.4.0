@@ -6,6 +6,7 @@ From: continuumio/anaconda3
   Version 4.4.0
 
   Usage:
+  $ singularity run --app notebook -B /run/user:/run/user jupyter-jupyter-4.4.0.simg
   $ singularity run -B /run/user:/run/user jupyter-jupyter-4.4.0.simg
 
 %setup
@@ -19,7 +20,8 @@ From: continuumio/anaconda3
 %runscript
   echo "Starting notebook..."
   echo "Open browser to localhost:8888"
-  exec /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --allow-root --port=8888 --no-browser
+  exec /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' \
+    --allow-root --port=8888 --no-browser
 
 %post
   # Install jupyter notebook
@@ -27,6 +29,12 @@ From: continuumio/anaconda3
   mkdir /opt/notebooks
   apt-get autoremove -y
   apt-get clean
+
+%apprun notebook
+  echo "Starting notebook..."
+  echo "Open browser to localhost:8888"
+  exec /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' \
+    --allow-root --port=8888 --no-browser --NotebookApp.token=''
 
 %test
   exec /opt/conda/bin/jupyter --version
