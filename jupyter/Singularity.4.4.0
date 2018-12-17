@@ -6,8 +6,14 @@ From: continuumio/anaconda3
   Version 4.4.0
 
   Usage:
-  $ singularity run --app notebook -B /run/user:/run/user jupyter-jupyter-4.4.0.simg
-  $ singularity run -B /run/user:/run/user jupyter-jupyter-4.4.0.simg
+  $ singularity run --app notebook \
+    -B /run/user:/run/user \
+    -B $(pwd):/opt/notebooks \
+    jupyter-jupyter-4.4.0.simg
+  $ singularity run \
+    -B /run/user:/run/user \
+    -B $(pwd):/opt/notebooks \
+    jupyter-jupyter-4.4.0.simg [args]
 
 %setup
 

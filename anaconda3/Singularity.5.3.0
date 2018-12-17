@@ -10,11 +10,11 @@ From: continuumio/anaconda3
   anaconda CLI version: 1.7.2
 
   Usage:
-  $ singularity run --app ipython anaconda3-anaconda3-latest.simg [args]
-  $ singularity run --app python anaconda3-anaconda3-latest.simg [args]
-  $ singularity run --app conda anaconda3-anaconda3-latest.simg [args]
-  $ singularity run --app anaconda anaconda3-anaconda3-latest.simg [args]
-  $ singularity shell anaconda3-anaconda3-latest.simg
+  $ singularity run --app ipython anaconda3-anaconda3-5.3.0.simg [args]
+  $ singularity run --app python anaconda3-anaconda3-5.3.0.simg [args]
+  $ singularity run --app conda anaconda3-anaconda3-5.3.0.simg [args]
+  $ singularity run --app anaconda anaconda3-anaconda3-5.3.0.simg [args]
+  $ singularity shell anaconda3-anaconda3-5.3.0.simg
 
 %setup
 
