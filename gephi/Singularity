@@ -8,8 +8,8 @@ Include: yum
   Version 0.9.2
 
   Usage:
-  $ singularity run gephi.0.9.2.simg [args]
-  $ singularity run --app gephi gephi.0.9.2.simg [args]
+  $ singularity run --app gephi gephi-gephi-latest.simg [args]
+  $ singularity run gephi gephi-gephi-latest.simg [args]
 
 %setup
 
